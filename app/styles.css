@@ -1,0 +1,12 @@
+.card-header, .sidebar-title {
+    font-weight: bold;
+    font-family: serif;
+    font-size: 50px;
+    color: darkgreen ;
+    text-align: center;
+    text-shadow: 5px 5px lightgray;
+}
+
+* {
+    color: darkblue;
+}
