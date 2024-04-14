@@ -3,12 +3,26 @@ from faicons import icon_svg
 
 from shiny import reactive
 from shiny.express import input, render, ui
-import palmerpenguins 
+import palmerpenguins
+
+ui.tags.style(
+    ".page-opts, .card-header, .sidebar-title {\
+        font-weight: bold;\
+        font-family: serif;\
+        font-size: 50px;\
+        color: darkgreen;\
+        text-align: center;\
+        text-shadow: 5px 5px lightgray;\
+        important;\
+    }\
+    * {\
+        color: darkblue;\
+    }"
+)
 
 df = palmerpenguins.load_penguins()
 
 ui.page_opts(title="Penguins dashboard", fillable=True)
-
 
 with ui.sidebar(title="Filter controls"):
     ui.input_slider("mass", "Mass", 2000, 6000, 6000)
