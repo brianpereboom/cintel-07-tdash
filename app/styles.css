@@ -1,0 +1,20 @@
+.card-header, .sidebar-title {
+    font-weight: bold;
+    font-family: serif;
+    font-size: 50px;
+    color: darkgreen ;
+    text-align: center;
+    text-shadow: 5px 5px lightgray;
+}
+
+.irs-max {font-family: 'arial'; color: black;}
+.irs-min {font-family: 'arial'; color: black;}
+.irs-bar {background: black !important;}
+.irs-line {border: 1px solid lightgray !important;}
+.irs-single {color:black !important; background: lightgray !important;}
+.irs-slider {color: black !important;}
+
+* {
+    color: darkblue;
+    background-color: #f7fdff;
+}
