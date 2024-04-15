@@ -5,6 +5,8 @@ from shiny import reactive
 from shiny.express import input, render, ui
 import palmerpenguins
 
+from pathlib import Path
+
 # Load Palmer Penguins DataFrame
 df = palmerpenguins.load_penguins()
 
@@ -112,7 +114,9 @@ with ui.layout_columns():
             return render.DataGrid(filtered_df()[cols], filters=True)
 
 # Set text style using CSS
-ui.include_css("app/styles.css")
+ui.include_css(
+    Path(__file__).parent / "styles.css"
+)
 
 # Reactive calc function to filter data frame when input.species() or input.mass() is changed.
 @reactive.calc
